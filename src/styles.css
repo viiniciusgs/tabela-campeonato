@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --Rocket-League-1-hex: #235FD9;
+    --Rocket-League-2-hex: #163573;
+    --Rocket-League-3-hex: #162440;
+    --Rocket-League-4-hex: #1DDDF2;
+    --Rocket-League-5-hex: #F2AE2E;
+
+}
+
+*, button, input {
+    font-family: 'Oswald', sans-serif;
+    background: var(--Rocket-League-3-hex);
+    color: #fafafa;
+}
