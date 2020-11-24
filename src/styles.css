@@ -17,6 +17,7 @@
 
 *, button, input {
     font-family: 'Oswald', sans-serif;
-    background: var(--Rocket-League-3-hex);
     color: #fafafa;
+    outline: none;
+    border: none;
 }
