@@ -54,9 +54,6 @@
     align-items: center;
     justify-content: space-between;
 
-    font-size: 3rem;
-    font-weight: 400;
-
     cursor: pointer;
 
     animation: DownUp 1s linear;
@@ -67,4 +64,22 @@
 
 .player:hover {
     border-color: var(--Rocket-League-5-hex);
+}
+
+.player h3 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.player:hover h3 {
+    width: 100%;
+    border-radius: .5rem;
+
+    background: linear-gradient(transparent, var(--Rocket-League-5-hex));
+
+    text-align: center;
+}
+
+.championship-infos {
+
 }

@@ -17,28 +17,32 @@ export default function Main() {
                 <div className="cards">
                     <div className="player">
                         <img src={imageIcon}></img>
-                        ExFury
+                        <h3>ExFury</h3>
                     </div>
 
                     <div className="player">
                         <img src={imageIcon}></img>
-                        GabrielS3T
+                        <h3>GabrielS3T</h3>
                     </div>
 
                     <div className="player">
                         <img src={imageIcon}></img>
-                        Neon
+                        <h3>Neon</h3>
                     </div>
 
                     <div className="player">
                         <img src={imageIcon}></img>
-                        Zoltan
+                        <h3>Zoltan</h3>
                     </div>
                 </div>
 
                 <button>
                     <IoIosArrowDown size={20} />
                 </button>
+            </div>
+
+            <div className="championship-infos">
+
             </div>
         </div>
     );
