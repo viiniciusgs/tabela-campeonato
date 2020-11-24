@@ -81,5 +81,52 @@
 }
 
 .championship-infos {
+    height: 100vh;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--Rocket-League-1-hex);
+}
+
+.content-table {
+    min-width: 80vw;
+    margin: 2.5rem 0;
+    border-collapse: collapse;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 0 1rem 2rem var(--Rocket-League-4-hex), 0 0 5rem var(--Rocket-League-1-hex);
+    overflow: hidden;
+
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.content-table thead tr {
+    background: var(--Rocket-League-3-hex);
+    text-align: left;
+}
+
+.content-table th {
+    width: 9rem;
+    padding: 1.2rem 1.5rem;
+
+    font-weight: 500;
+    color: var(--Rocket-League-4-hex);
+}
+
+.content-table td {
+    padding: 1.2rem 1.5rem;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 5px solid var(--Rocket-League-3-hex);
+}
+
+.championship-infos img {
+    width: 5rem;
 }
