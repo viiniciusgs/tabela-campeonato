@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 import React, { useState, useEffect } from 'react';
 
 import api from '../services/api';
@@ -28,7 +30,7 @@ export default function Admin() {
     }
 
     function login() {
-        if(password === 'teste') {
+        if(password === process.env.REACT_APP_PASSWORD) {
             setIsLogged(true);
         } else {
             window.location.href = '/';
