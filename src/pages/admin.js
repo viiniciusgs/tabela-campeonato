@@ -5,6 +5,7 @@ import api from '../services/api';
 import { IoMdArrowForward } from 'react-icons/io';
 
 import Container from '../components/Container';
+import Historic from '../components/Historic';
 
 import imagemLogo from '../images/logo.svg';
 
@@ -89,6 +90,8 @@ export default function Admin() {
                     </tbody>
                 </table>
             </div>
+
+            <Historic />
         </div>
     );
 }

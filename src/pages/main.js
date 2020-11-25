@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import api from '../services/api';
 
 import Container from '../components/Container';
+import Historic from '../components/Historic';
 
 import imagemLogo from '../images/logo.svg';
 
@@ -60,6 +61,8 @@ export default function Main() {
                     </tbody>
                 </table>
             </div>
+
+            <Historic />
         </div>
     );
 }
