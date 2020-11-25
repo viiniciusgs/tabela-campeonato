@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-import api from '../../services/api';
+import api from '../services/api';
 
 import { IoIosArrowDown } from 'react-icons/io';
 
-import imageIcon from '../../images/icon.svg';
-import imagemLogo from '../../images/logo.svg';
-import './styles.css';
-import './animations.css';
+import imageIcon from '../images/icon.svg';
+import imagemLogo from '../images/logo.svg';
+import '../styles/main.css';
+import '../styles/animations.css';
 
 export default function Main() {
     const [players, setPlayers] = useState([]);

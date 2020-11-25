@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Main from './pages/Main';
-import Admin from './pages/Admin';
+import Main from './pages/main';
+import Admin from './pages/admin';
 
 const Routes = () => (
     <BrowserRouter>

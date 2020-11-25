@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-import api from '../../services/api';
+import api from '../services/api';
 
-import { IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowDown, IoMdArrowForward } from 'react-icons/io';
 
-import imageIcon from '../../images/icon.svg';
-import imagemLogo from '../../images/logo.svg';
-import './styles.css';
-import './animations.css';
+import imageIcon from '../images/icon.svg';
+import imagemLogo from '../images/logo.svg';
+import '../styles/login.css';
+import '../styles/main.css';
+import '../styles/animations.css';
 
 export default function Admin() {
     const [players, setPlayers] = useState([]);
@@ -36,16 +37,21 @@ export default function Admin() {
         return(
             <div className="login-admin">
                 <form onSubmit={login}>
+                    <div className="logIn">
+                        <h1>Login in</h1>
+                        <h2>Acesso apenas para admins</h2>
+                    </div>
+
                     <input type="password" placeholder="Insira a senha" onChange={event => setPassword(event.target.value)} />
-                    <button type="button" onClick={login}>LOGIN</button>
+                    <button type="button" onClick={login}>LOGIN<IoMdArrowForward /></button>
                 </form>
             </div>
         );
     }
 
     return(
-        <div className="main-admin">
-            <div className="container-admin">
+        <div className="main">
+            <div className="container">
                 <h1>CAMPEONATO PÃO DE BATATÃ</h1>
 
                 <div className="cards">
@@ -77,7 +83,7 @@ export default function Admin() {
                 </button>
             </div>
 
-            <div id="championship-infos" className="championship-infos-admin">
+            <div id="championship-infos" className="championship-infos">
                 <img src={imagemLogo} alt="Rocket League" />
 
                 <table className="content-table">

@@ -1,0 +1,79 @@
+.login-admin {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(var(--Rocket-League-3-hex), var(--Rocket-League-1-hex));
+}
+
+.login-admin form {
+    padding: 2rem;
+
+    border-radius: 2rem;
+    box-shadow: 0 2rem 2rem var(--Rocket-League-3-hex), 0 0 5rem var(--Rocket-League-1-hex);
+
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5rem;
+    align-items: center;
+
+    background: #FFF;
+}
+
+.logIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logIn h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: black;
+}
+
+.logIn h2 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: black;
+}
+
+.login-admin input {
+    margin-bottom: -3rem;
+
+    border: 1px solid #dddddd;
+    border-radius: 2rem;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.2);
+
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+}
+
+.login-admin button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background: var(--Rocket-League-3-hex);
+    border-radius: 2rem;
+
+    font-size: 3rem;
+    
+    cursor: pointer;
+}
+
+.login-admin button:hover {
+    opacity: 0.9;
+}
+
+.login-admin button svg {
+    position: absolute;
+    right: 1rem;
+}
