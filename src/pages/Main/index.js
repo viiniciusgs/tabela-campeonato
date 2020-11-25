@@ -4,11 +4,8 @@ import api from '../../services/api';
 
 import { IoIosArrowDown } from 'react-icons/io';
 
-import imageIcon from '../../images/rocket-league.svg';
-import rankGold from '../../images/gold.png';
-import rankSilver from '../../images/silver.png';
-import rankBronze from '../../images/bronze.png';
-import unranked from '../../images/unranked.png';
+import imageIcon from '../../images/icon.svg';
+import imagemLogo from '../../images/logo.svg';
 import './styles.css';
 import './animations.css';
 
@@ -60,6 +57,8 @@ export default function Main() {
             </div>
 
             <div id="championship-infos" className="championship-infos">
+                <img src={imagemLogo} />
+
                 <table className="content-table">
                     <thead>
                         <tr>
@@ -75,21 +74,9 @@ export default function Main() {
                     </thead>
                     <tbody>
                         {players.map((player, index) => {
-                            let rank = '';
-
-                            if(index === 0) {
-                                rank = rankGold; 
-                            } else if(index === 1) {
-                                rank = rankSilver;
-                            } else if(index === 2) {
-                                rank = rankBronze;
-                            } else {
-                                rank = unranked;
-                            }
-
                             return(
                                 <tr key={player._id}>
-                                    <td><img src={rank} />{` ${player.name}`}</td>
+                                    <td><h3><p>{index+1}</p>{player.name}</h3></td>
                                     <td>{player.score}</td>
                                     <td>{player.gamesPlayed}</td>
                                     <td>{player.wins}</td>
