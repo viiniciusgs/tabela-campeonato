@@ -1,4 +1,50 @@
-.container {
+.login-admin {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(var(--Rocket-League-3-hex), var(--Rocket-League-1-hex));
+}
+
+.login-admin form {
+    padding: 2rem;
+
+    border: 1px solid #333;
+    border-radius: 1rem;
+    /* box-shadow: 0 1rem 2rem black, 0 0 5rem white; */
+
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5rem;
+
+    background: #dddddd;
+}
+
+.login-admin input {
+    background: #FFF;
+    border-radius: 1rem;
+
+    font-size: 5rem;
+    text-align: center;
+    color: #333;
+}
+
+.login-admin button {
+    background: var(--Rocket-League-3-hex);
+    border-radius: 1rem;
+
+    font-size: 5rem;
+    
+    cursor: pointer;
+}
+
+.login-admin button:hover {
+    opacity: 0.9;
+}
+
+.container-admin {
     height: 100vh;
 
     display: flex;
@@ -9,13 +55,13 @@
     background: linear-gradient(var(--Rocket-League-3-hex), var(--Rocket-League-1-hex));
 }
 
-.container h1 {
+.container-admin h1 {
     font-size: 5rem;
     color: var(--Rocket-League-5-hex);
     text-shadow: 0 .5rem 2rem var(--Rocket-League-5-hex);
 }
 
-.container button {
+.container-admin button {
     position: absolute;
     bottom: 1rem;
     
@@ -84,7 +130,7 @@
     text-align: center;
 }
 
-.championship-infos {
+.championship-infos-admin {
     height: 100vh;
 
     display: flex;
@@ -97,7 +143,7 @@
     background: var(--Rocket-League-3-hex);
 }
 
-.championship-infos img {
+.championship-infos-admin img {
     width: 15vw;
     position: absolute;
     top: 2rem;

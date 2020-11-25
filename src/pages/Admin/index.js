@@ -9,8 +9,10 @@ import imagemLogo from '../../images/logo.svg';
 import './styles.css';
 import './animations.css';
 
-export default function Main() {
+export default function Admin() {
     const [players, setPlayers] = useState([]);
+    const [isLogged, setIsLogged] = useState(false);
+    const [password, setPassword] = useState('');
 
     useEffect(() => {
         loadPlayers();
@@ -22,9 +24,28 @@ export default function Main() {
         setPlayers(response.data);
     }
 
+    function login() {
+        if(password === 'teste') {
+            setIsLogged(true);
+        } else {
+            window.location.href = '/';
+        }
+    }
+
+    if(isLogged === false) {
+        return(
+            <div className="login-admin">
+                <form onSubmit={login}>
+                    <input type="password" placeholder="Insira a senha" onChange={event => setPassword(event.target.value)} />
+                    <button type="button" onClick={login}>LOGIN</button>
+                </form>
+            </div>
+        );
+    }
+
     return(
-        <div className="main">
-            <div className="container">
+        <div className="main-admin">
+            <div className="container-admin">
                 <h1>CAMPEONATO PÃO DE BATATÃ</h1>
 
                 <div className="cards">
@@ -56,7 +77,7 @@ export default function Main() {
                 </button>
             </div>
 
-            <div id="championship-infos" className="championship-infos">
+            <div id="championship-infos" className="championship-infos-admin">
                 <img src={imagemLogo} alt="Rocket League" />
 
                 <table className="content-table">
@@ -72,7 +93,7 @@ export default function Main() {
                             <th>SG</th>
                         </tr>
                     </thead>
-                    
+
                     <tbody>
                         {players.map((player, index) => {
                             return(
