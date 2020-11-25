@@ -19,8 +19,16 @@ export default function Admin() {
     const [isLogged, setIsLogged] = useState(false);
     const [password, setPassword] = useState('');
 
+    let localStoragePassword = '';
+
     useEffect(() => {
         loadPlayers();
+
+        localStoragePassword = JSON.parse(localStorage.getItem('password')) || '';
+
+        if(localStoragePassword === process.env.REACT_APP_PASSWORD) {
+            setIsLogged(true);
+        }
     }, []);
 
     async function loadPlayers() {
@@ -30,10 +38,14 @@ export default function Admin() {
     }
 
     function login() {
-        if(password === process.env.REACT_APP_PASSWORD) {
-            setIsLogged(true);
-        } else {
-            window.location.href = '/';
+        if(localStoragePassword === '') {
+            if(password === process.env.REACT_APP_PASSWORD) {
+                localStorage.setItem('password', JSON.stringify(password));
+    
+                setIsLogged(true);
+            } else {
+                window.location.href = '/';
+            }
         }
     }
 
