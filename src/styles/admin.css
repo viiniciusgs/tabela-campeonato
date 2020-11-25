@@ -77,3 +77,29 @@
     position: absolute;
     right: 1rem;
 }
+
+.championship-infos {
+    min-height: 100vh;
+}
+
+.reset {
+    margin: 2rem 0 1rem;
+    padding: .5rem;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--Rocket-League-4-hex);
+
+    cursor: pointer;
+}
+
+.reset:hover {
+    opacity: 0.7;
+}
+
+.content-table {
+    margin: 0;
+}

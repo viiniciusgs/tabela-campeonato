@@ -5,13 +5,14 @@ import React, { useState, useEffect } from 'react';
 import api from '../services/api';
 
 import { IoMdArrowForward } from 'react-icons/io';
+import { GrPowerReset } from 'react-icons/gr';
 
 import Container from '../components/Container';
 import Historic from '../components/Historic';
 
 import imagemLogo from '../images/logo.svg';
 
-import '../styles/login.css';
+import '../styles/admin.css';
 import '../styles/main.css';
 
 export default function Admin() {
@@ -65,12 +66,30 @@ export default function Admin() {
         );
     }
 
+    async function reset() {
+        const wantReset = window.confirm('Deseja resetar a tabela?');
+
+        if(wantReset === true) {
+            await api.put('/reset-players');
+
+            loadPlayers();
+
+            return;
+        }
+
+        return;
+    }
+
     return(
         <div className="main">
             <Container />
 
             <div id="championship-infos" className="championship-infos">
                 <img src={imagemLogo} alt="Rocket League" />
+
+                <button className="reset" onClick={reset}>
+                    <GrPowerReset size={20} color='white' />
+                </button>
 
                 <table className="content-table">
                     <thead>
