@@ -6,6 +6,8 @@ import api from '../services/api';
 
 import { IoMdArrowForward } from 'react-icons/io';
 import { GrPowerReset } from 'react-icons/gr';
+import { AiOutlineForm } from 'react-icons/ai';
+import { VscClose } from 'react-icons/vsc';
 
 import Container from '../components/Container';
 import Historic from '../components/Historic';
@@ -19,6 +21,11 @@ export default function Admin() {
     const [players, setPlayers] = useState([]);
     const [isLogged, setIsLogged] = useState(false);
     const [password, setPassword] = useState('');
+    const [newMatch, setNewMatch] = useState("new-match-none");
+    const [winnerName, setWinnerName] = useState('');
+    const [winnerGoals, setWinnerGoals] = useState(0);
+    const [loserName, setLoserName] = useState('');
+    const [loserGoals, setLoserGoals] = useState(0);
 
     let localStoragePassword = '';
 
@@ -80,6 +87,45 @@ export default function Admin() {
         return;
     }
 
+    async function registerNewMatch() {
+        let idWinner = '';
+        const initialsWinner = winnerName.substring(0, 3);
+        let idLoser = '';
+        const initialsLoser = loserName.substring(0, 3);
+              
+        for (const player of players) {
+            if(player.name === winnerName) {
+                idWinner = player._id;
+            } else if(player.name === loserName) {
+                idLoser = player._id;
+            }
+        }
+
+        await api.put(`/players/${idWinner}`, {
+            "wins": 1,
+            "loses": 0,
+            "goalsScored": parseInt(winnerGoals),
+            "concededGoals": parseInt(loserGoals)
+        });
+
+        await api.put(`/players/${idLoser}`, {
+            "wins": 0,
+            "loses": 1,
+            "goalsScored": parseInt(loserGoals),
+            "concededGoals": parseInt(winnerGoals)
+        });
+
+        await api.post('/match-history', {
+            "winnerName": initialsWinner,
+            "winnerGoals": winnerGoals,
+            "loserName": initialsLoser,
+            "loserGoals": loserGoals
+        });
+     
+        setNewMatch("new-match-none");
+        window.location.reload();
+    }
+
     return(
         <div className="main">
             <Container />
@@ -122,6 +168,38 @@ export default function Admin() {
                         })}
                     </tbody>
                 </table>
+
+                <button onClick={() => setNewMatch("new-match")} className="register-new-match">Cadastrar nova partida <AiOutlineForm /></button>
+
+                <div className={newMatch}>
+                    <div className="form-new-match">
+                        <select onChange={event => setWinnerName(event.target.value)}>
+                            <option value="winner">Vencedor</option>
+
+                            {players.map(player => {
+                                return(
+                                    <option key={player._id} value={player.name}>{player.name}</option> 
+                                );
+                            })}
+                        </select>
+
+                        <input type="number" onChange={event => setWinnerGoals(event.target.value)} placeholder="0" />
+                        <VscClose size={20} />
+                        <input type="number" onChange={event => setLoserGoals(event.target.value)} placeholder="0" />
+
+                        <select onChange={event => setLoserName(event.target.value)}>
+                            <option value="loser">Perdedor</option>
+
+                            {players.map(player => {
+                                return(
+                                    <option key={player._id} value={player.name}>{player.name}</option> 
+                                );
+                            })}
+                        </select>
+                    </div>
+
+                    <button onClick={registerNewMatch}>CADASTRAR</button>
+                </div>
             </div>
 
             <Historic />

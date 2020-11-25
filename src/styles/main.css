@@ -1,5 +1,6 @@
 .championship-infos {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 2rem;
 
     display: flex;
     flex-direction: column;
@@ -13,6 +14,7 @@
 
 .championship-infos img {
     width: 15vw;
+    height: 10vh;
     position: absolute;
     top: 2rem;
 }

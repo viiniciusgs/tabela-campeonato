@@ -83,7 +83,7 @@
 }
 
 .reset {
-    margin: 2rem 0 1rem;
+    margin: 10rem 0 1rem;
     padding: .5rem;
 
     border-radius: 50%;
@@ -97,9 +97,89 @@
 }
 
 .reset:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .content-table {
     margin: 0;
+}
+
+.register-new-match {
+    margin: 2rem;
+    border-bottom: 1px solid var(--Rocket-League-4-hex);
+
+    display: flex;
+    grid-gap: .5rem;
+    align-items: center;
+
+    background: initial;
+
+    cursor: pointer;
+}
+
+.new-match-none {
+    display: none;
+}
+
+.new-match {
+    width: 30%;
+    padding: 2rem;
+
+    border-radius: 1rem;
+    box-shadow: 1px 2px 3px var(--Rocket-League-5-hex), 0 0 5px var(--Rocket-League-4-hex);
+
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
+    align-items: center;
+
+    background: var(--Rocket-League-5-hex);
+}
+
+.new-match button {
+    width: 90%;
+
+    background: var(--Rocket-League-3-hex);
+    border-radius: 1rem;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+.form-new-match {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-new-match select {
+    padding: 1rem;
+
+    background: var(--Rocket-League-3-hex);
+    border-radius: 1rem;
+
+    font-size: 2rem;
+    color: var(--Rocket-League-4-hex);
+}
+
+.form-new-match input {
+    width: 10%;
+
+    background: initial;
+
+    font-size: 2rem;
+}
+
+.form-new-match input:nth-child(2) {
+    text-align: end;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }

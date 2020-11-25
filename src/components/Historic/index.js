@@ -21,6 +21,7 @@ export default function Historic() {
 
     return(
         <div className="historic">
+            <h1>HISTÓRICO DE PARTIDAS</h1>
             {historic.map(match => {
                 return(
                     <div className="card-historic" key={match._id}>
