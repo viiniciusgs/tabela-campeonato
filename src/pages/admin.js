@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import api from '../services/api';
 
-import { IoIosArrowDown, IoMdArrowForward } from 'react-icons/io';
+import { IoMdArrowForward } from 'react-icons/io';
 
-import imageIcon from '../images/icon.svg';
+import Container from '../components/Container';
+
 import imagemLogo from '../images/logo.svg';
+
 import '../styles/login.css';
 import '../styles/main.css';
-import '../styles/animations.css';
 
 export default function Admin() {
     const [players, setPlayers] = useState([]);
@@ -51,37 +52,7 @@ export default function Admin() {
 
     return(
         <div className="main">
-            <div className="container">
-                <h1>CAMPEONATO PÃO DE BATATÃ</h1>
-
-                <div className="cards">
-                    <div className="player">
-                        <img src={imageIcon} alt="Rocket League"></img>
-                        <h3>ExFury</h3>
-                    </div>
-
-                    <div className="player">
-                        <img src={imageIcon} alt="Rocket League"></img>
-                        <h3>GabrielS3T</h3>
-                    </div>
-
-                    <div className="player">
-                        <img src={imageIcon} alt="Rocket League"></img>
-                        <h3>Neon</h3>
-                    </div>
-
-                    <div className="player">
-                        <img src={imageIcon} alt="Rocket League"></img>
-                        <h3>Zoltan</h3>
-                    </div>
-                </div>
-
-                <button>
-                    <a href="#championship-infos">
-                        <IoIosArrowDown size={20} />
-                    </a>
-                </button>
-            </div>
+            <Container />
 
             <div id="championship-infos" className="championship-infos">
                 <img src={imagemLogo} alt="Rocket League" />
