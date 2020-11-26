@@ -77,6 +77,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .main {
+        scroll-snap-type: none;
+    }
+
     .content-table {
         width: 50%;
         

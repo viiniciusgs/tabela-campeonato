@@ -49,6 +49,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .historic {
+        padding: 2rem 2rem 4rem;
+    }
+
     .card-historic {
         width: 80%;
     }
