@@ -19,5 +19,5 @@ yarn install
 yarn start
 ```
 
-Executa a aplicação em modo de desenvolvimento.
+Executa a aplicação em modo de desenvolvimento. <br>
 Abra http://localhost:3000 para visualizá-lo no navegador.
