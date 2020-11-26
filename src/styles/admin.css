@@ -183,3 +183,17 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield;
 }
+
+@media screen and (max-width:768px) {
+    .new-match {
+        width: 90%;
+    }
+
+    .form-new-match select {
+        padding: .5rem;
+    }
+
+    .new-match button {
+        width: 100%;
+    }
+}
