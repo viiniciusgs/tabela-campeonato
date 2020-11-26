@@ -19,6 +19,15 @@ export default function Historic() {
         setHistoric(response.data);
     }
 
+    if(historic.length === 0) {
+        return(
+            <div className="historic">
+                <h1>HISTÓRICO DE PARTIDAS</h1>
+                <h2>O histórico de partidas aparecerão aqui</h2>
+            </div>
+        );
+    }
+
     return(
         <div className="historic">
             <h1>HISTÓRICO DE PARTIDAS</h1>
