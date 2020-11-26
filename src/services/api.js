@@ -1,5 +1,7 @@
+import 'dotenv/config';
+
 import axios from 'axios';
 
-const api = axios.create({ baseURL: 'https://campeonato-rocket-league.herokuapp.com' });
+const api = axios.create({ baseURL: process.env.REACT_APP_API });
 
 export default api;
