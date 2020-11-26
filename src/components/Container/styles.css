@@ -40,8 +40,8 @@
 }
 
 .player {
-    width: 15vw;
-    height: 50vh;
+    width: clamp(14rem, 15vw, 35rem);
+    height: clamp(20rem, 50vh, 50rem);
 
     background: var(--Rocket-League-3-hex);
     background-image: url(../../images/teste.png);
@@ -71,7 +71,8 @@
 }
 
 .player img {
-    width: 3vw;
+    width: clamp(3rem, 4vw, 6rem);
+    height: clamp(3rem, 4vw, 6rem);
 }
 
 .player h3 {

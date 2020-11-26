@@ -22,7 +22,7 @@
 }
 
 .championship-infos img {
-    width: 15vw;
+    width: clamp(15rem, 15vw, 20rem);
     height: 10vh;
     position: absolute;
     top: 2rem;
