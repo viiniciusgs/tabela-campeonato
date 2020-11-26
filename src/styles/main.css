@@ -29,7 +29,6 @@
 }
 
 .table {
-    width: 100%;
     border-radius: 1rem;
     box-shadow: 0 1rem 2rem var(--Rocket-League-4-hex), 0 0 5rem var(--Rocket-League-1-hex);
 
@@ -134,8 +133,6 @@
     }
 
     .content-table {
-        width: 50%;
-        
         display: block;
         overflow-x: auto;
         white-space: nowrap;
