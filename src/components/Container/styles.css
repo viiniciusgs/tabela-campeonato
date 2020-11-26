@@ -7,6 +7,10 @@
     justify-content: center;
 
     background: linear-gradient(var(--Rocket-League-3-hex), var(--Rocket-League-1-hex));
+
+    position: relative;
+
+    scroll-snap-align: start;
 }
 
 .container h1 {

@@ -1,3 +1,10 @@
+.main {
+    height: 100vh;
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
 .championship-infos {
     min-height: 100vh;
     padding: 2rem;
@@ -10,6 +17,8 @@
     position: relative;
 
     background: var(--Rocket-League-3-hex);
+
+    scroll-snap-align: start;
 }
 
 .championship-infos img {
