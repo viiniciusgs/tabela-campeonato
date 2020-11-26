@@ -137,37 +137,68 @@ export default function Admin() {
                     <GrPowerReset size={20} color='white' />
                 </button>
 
-                <table className="content-table">
+            <div className="table">
+                <table className="classification">
                     <thead>
-                        <tr>
-                            <th>CLASSIFICAÇÃO</th>
-                            <th>P</th>
-                            <th>J</th>
-                            <th>V</th>
-                            <th>D</th>
-                            <th>GP</th>
-                            <th>GC</th>
-                            <th>SG</th>
-                        </tr>
+                    <tr>
+                        <th>CLASSIFICAÇÃO</th>
+                    </tr>
                     </thead>
 
                     <tbody>
-                        {players.map((player, index) => {
-                            return(
-                                <tr key={player._id}>
-                                    <td><h3><p>{index+1}</p>{player.name}</h3></td>
-                                    <td>{player.score}</td>
-                                    <td>{player.gamesPlayed}</td>
-                                    <td>{player.wins}</td>
-                                    <td>{player.loses}</td>
-                                    <td>{player.goalsScored}</td>
-                                    <td>{player.concededGoals}</td>
-                                    <td>{player.goalDifference}</td>
-                                </tr>
-                            );
-                        })}
+                    {players.map((player, index) => {
+                        let name = "";
+
+                        if (window.screen.width < 768) {
+                        name = player.name.substring(0, 3);
+                        } else {
+                        name = player.name;
+                        }
+
+                        return (
+                        <tr key={player._id}>
+                            <td>
+                            <h3>
+                                <p>{index + 1}</p>
+                                {name}
+                            </h3>
+                            </td>
+                        </tr>
+                        );
+                    })}
                     </tbody>
                 </table>
+
+                <table className="content-table">
+                    <thead>
+                    <tr>
+                        <th>P</th>
+                        <th>J</th>
+                        <th>V</th>
+                        <th>D</th>
+                        <th>GP</th>
+                        <th>GC</th>
+                        <th>SG</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {players.map((player) => {
+                        return (
+                        <tr key={player._id}>
+                            <td>{player.score}</td>
+                            <td>{player.gamesPlayed}</td>
+                            <td>{player.wins}</td>
+                            <td>{player.loses}</td>
+                            <td>{player.goalsScored}</td>
+                            <td>{player.concededGoals}</td>
+                            <td>{player.goalDifference}</td>
+                        </tr>
+                        );
+                    })}
+                    </tbody>
+                </table>
+            </div>
 
                 <button onClick={() => setNewMatch("new-match")} className="register-new-match">Cadastrar nova partida <AiOutlineForm /></button>
 

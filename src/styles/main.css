@@ -28,12 +28,64 @@
     top: 2rem;
 }
 
-.content-table {
-    min-width: 80vw;
-    margin: 10rem 0 2.5rem;
-    border-collapse: collapse;
+.table {
+    width: 100%;
     border-radius: 1rem;
     box-shadow: 0 1rem 2rem var(--Rocket-League-4-hex), 0 0 5rem var(--Rocket-League-1-hex);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.classification {
+    border-collapse: collapse;
+    
+    overflow: hidden;
+
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.classification thead tr {
+    text-align: left;
+}
+
+.classification th {
+    width: 9rem;
+    padding: 1.2rem 1.5rem;
+
+    font-weight: 500;
+    color: var(--Rocket-League-4-hex);
+}
+
+.classification tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.classification tbody tr:last-of-type {
+    border-bottom: 2px solid var(--Rocket-League-3-hex);
+}
+
+.classification td {
+    padding: 1.2rem 1.5rem;
+}
+
+.classification td h3 {
+    display: flex;
+    grid-gap: 1rem;
+    align-items: center;
+
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.classification td p {
+    font-size: 2rem;
+}
+
+.content-table {
+    border-collapse: collapse;
     overflow: hidden;
 
     font-size: 2.5rem;
@@ -64,14 +116,6 @@
     padding: 1.2rem 1.5rem;
 }
 
-.content-table td h3 {
-    display: flex;
-    grid-gap: 1rem;
-    align-items: center;
-
-    font-weight: 400;
-}
-
 .content-table td p {
     font-size: 2rem;
 }
@@ -79,6 +123,14 @@
 @media screen and (max-width: 768px) {
     .main {
         scroll-snap-type: none;
+    }
+
+    .classification th {
+        font-size: 2rem;
+    }
+
+    .classification td h3 {
+        text-transform: uppercase;
     }
 
     .content-table {
@@ -89,7 +141,7 @@
         white-space: nowrap;
     }
 
-    .content-table td h3 {
-        text-transform: uppercase;
+    .content-table th {
+        font-size: 2rem;
     }
 }
