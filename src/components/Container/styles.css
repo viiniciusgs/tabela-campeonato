@@ -1,5 +1,6 @@
 .container {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 2rem;
 
     display: flex;
     flex-direction: column;
@@ -17,6 +18,7 @@
     font-size: 5rem;
     color: var(--Rocket-League-5-hex);
     text-shadow: 0 .5rem 2rem var(--Rocket-League-5-hex);
+    text-align: center;
 }
 
 .container button {
@@ -40,7 +42,7 @@
 }
 
 .player {
-    width: clamp(14rem, 15vw, 35rem);
+    width: clamp(14rem, 15vw, 30rem);
     height: clamp(20rem, 50vh, 50rem);
 
     background: var(--Rocket-League-3-hex);
@@ -87,4 +89,14 @@
     background: linear-gradient(transparent, var(--Rocket-League-5-hex));
 
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .player {
+        width: 60vw;
+    }
 }

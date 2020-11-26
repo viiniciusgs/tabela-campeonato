@@ -75,3 +75,13 @@
 .content-table td p {
     font-size: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+    .content-table {
+        width: 50%;
+        
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

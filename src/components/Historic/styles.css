@@ -9,6 +9,8 @@
 
     background: var(--Rocket-League-5-hex);
 
+    text-align: center;
+
     scroll-snap-align: start;
 }
 
@@ -44,4 +46,10 @@
     align-items: center;
 
     font-size: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .card-historic {
+        width: 80%;
+    }
 }
