@@ -6,11 +6,12 @@
 
 ### Sobre
 
-Este projeto foi desenvolvido para realizar campeonatos de Rocket League com meus amigos, a aplicação foi feita em React.js e consumindo uma API REST feita em Node.js, neste serviço é possível criar players para competir, mudar os dados da tabela como: vitórias, derrotas, gols marcados e sofridos, e o sistema calcula automáticamente a pontuação e o saldo de gols do jogador.
+Este projeto foi desenvolvido para realizar campeonatos de Rocket League com meus amigos, a aplicação foi feita em React.js e consumindo uma API REST feita em Node.js, neste serviço é possível(apenas para admins) cadastrar uma nova partida selecionando os jogadores e o placar, com isso o sistema calcula automaticamente a pontuação, o saldo de gols do jogador e também mostra o histórico de partidas.
 
 Link do repositório da API: https://github.com/thiaagodev/api-campeonato
 
 ### Executando localmente
+
 ```sh
 # instale todas as dependências
 yarn install
