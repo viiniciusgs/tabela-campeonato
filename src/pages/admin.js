@@ -79,7 +79,7 @@ export default function Admin() {
         if(wantReset === true) {
             await api.put('/reset-players');
 
-            loadPlayers();
+            window.location.reload();
 
             return;
         }
