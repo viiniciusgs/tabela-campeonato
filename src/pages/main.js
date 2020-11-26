@@ -45,9 +45,17 @@ export default function Main() {
                     
                     <tbody>
                         {players.map((player, index) => {
+                            let name = '';
+
+                            if(window.screen.width < 768) {
+                                name = player.name.substring(0, 3);
+                            } else {
+                                name = player.name;
+                            }
+
                             return(
                                 <tr key={player._id}>
-                                    <td><h3><p>{index+1}</p>{player.name}</h3></td>
+                                    <td><h3><p>{index+1}</p>{name}</h3></td>
                                     <td>{player.score}</td>
                                     <td>{player.gamesPlayed}</td>
                                     <td>{player.wins}</td>

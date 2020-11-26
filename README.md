@@ -1,4 +1,4 @@
-# Campeonato Pão de Batatã
+# Campeonato Rocket League
 
 🎮 Aplicação desenvolvida com muito amor e carinho, para o maior campeonato de Rocket League do nosso bairro
 

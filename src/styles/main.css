@@ -88,4 +88,8 @@
         overflow-x: auto;
         white-space: nowrap;
     }
+
+    .content-table td h3 {
+        text-transform: uppercase;
+    }
 }
