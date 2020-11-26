@@ -38,8 +38,9 @@
 }
 
 .classification {
+    width: 15vw;
+
     border-collapse: collapse;
-    
     overflow: hidden;
 
     font-size: 2.5rem;
@@ -84,6 +85,8 @@
 }
 
 .content-table {
+    width: 50vw;
+
     border-collapse: collapse;
     overflow: hidden;
 
@@ -124,6 +127,14 @@
         scroll-snap-type: none;
     }
 
+    .table {
+        width: 100%;
+    }
+
+    .classification {
+        width: auto;
+    }
+
     .classification th {
         font-size: 2rem;
     }
@@ -133,6 +144,8 @@
     }
 
     .content-table {
+        width: auto;
+
         display: block;
         overflow-x: auto;
         white-space: nowrap;
