@@ -64,7 +64,7 @@
 }
 
 .classification tbody tr:last-of-type {
-    border-bottom: 2px solid var(--Rocket-League-3-hex);
+    border-bottom: 0px;
 }
 
 .classification td {
@@ -111,7 +111,7 @@
 }
 
 .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid var(--Rocket-League-3-hex);
+    border-bottom: 0px;
 }
 
 .content-table td {
