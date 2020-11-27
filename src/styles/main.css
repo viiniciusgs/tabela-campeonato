@@ -134,6 +134,7 @@
 
     .classification {
         width: auto;
+        border-right: 1px solid #dddddd;
     }
 
     .classification th {

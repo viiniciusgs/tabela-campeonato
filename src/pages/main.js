@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import api from "../services/api";
+import api from '../services/api';
 
-import Container from "../components/Container";
-import Historic from "../components/Historic";
+import Container from '../components/Container';
+import Historic from '../components/Historic';
 
-import imagemLogo from "../images/logo.svg";
+import imagemLogo from '../images/logo.svg';
 
-import "../styles/main.css";
+import '../styles/main.css';
 
 export default function Main() {
   const [players, setPlayers] = useState([]);

@@ -31,7 +31,7 @@ export default function Container() {
             </div>
             <button>
                 <a href="#championship-infos">
-                    <IoIosArrowDown size={20} />
+                    <IoIosArrowDown size={25} />
                 </a>
             </button>
         </div>
