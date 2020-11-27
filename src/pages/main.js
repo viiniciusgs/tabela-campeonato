@@ -4,6 +4,7 @@ import api from '../services/api';
 
 import Container from '../components/Container';
 import Historic from '../components/Historic';
+import Footer from '../components/Footer';
 
 import imagemLogo from '../images/logo.svg';
 
@@ -94,6 +95,8 @@ export default function Main() {
       </div>
 
       <Historic />
+
+      <Footer />
     </div>
   );
 }

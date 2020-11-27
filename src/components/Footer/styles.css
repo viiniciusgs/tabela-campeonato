@@ -1,0 +1,16 @@
+.footer {
+    height: 2rem;
+    background: #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    scroll-snap-align: end;
+}
+
+.footer pre {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #dddddd;
+}
