@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import api from '../../services/api';
 
-import { VscClose } from 'react-icons/vsc';
+import { VscClose, VscChevronUp } from 'react-icons/vsc';
 
 import './styles.css';
 
@@ -24,6 +24,12 @@ export default function Historic() {
             <div className="historic">
                 <h1>HISTÓRICO DE PARTIDAS</h1>
                 <h2>O histórico de partidas aparecerão aqui</h2>
+
+                <button>
+                    <a href="#container">
+                        <VscChevronUp size={15} />
+                    </a>    
+                </button>   
             </div>
         );
     }
@@ -43,7 +49,13 @@ export default function Historic() {
                         <h2>{match.loserName}</h2>
                     </div>
                 );
-            })}       
+            })}
+
+            <button>
+                <a href="#container">
+                    <VscChevronUp size={15} />
+                </a>    
+            </button>       
         </div>
     );
 }

@@ -26,8 +26,6 @@
     bottom: 0rem;
     
     background: initial;
-    
-    cursor: pointer;
 
     animation: AnimationButton 1s linear infinite;
     animation-delay: 4s;
