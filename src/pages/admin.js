@@ -11,6 +11,7 @@ import { VscClose } from 'react-icons/vsc';
 
 import Container from '../components/Container';
 import Historic from '../components/Historic';
+import Footer from '../components/Footer';
 
 import imagemLogo from '../images/logo.svg';
 
@@ -234,6 +235,8 @@ export default function Admin() {
             </div>
 
             <Historic />
+
+            <Footer />
         </div>
     );
 }
