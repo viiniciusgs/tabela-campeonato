@@ -2,7 +2,7 @@
 
 🎮 Aplicação desenvolvida com muito amor e carinho, para o maior campeonato de Rocket League do nosso bairro
 
-## [Veja o site no ar](https://camp-pao-de-batata.vercel.app/)
+## [Veja o site no ar](https://rocketleague-campeonato.vercel.app/)
 
 ![Screenshot 1](./.github/Screenshot_1.png)
 ![Screenshot 2](./.github/Screenshot_2.png)
