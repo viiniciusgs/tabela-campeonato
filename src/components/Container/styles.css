@@ -46,7 +46,7 @@
     background: var(--Rocket-League-3-hex);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
 
     border: .3rem solid var(--Rocket-League-3-hex);
     border-radius: 1rem;
