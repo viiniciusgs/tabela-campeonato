@@ -44,10 +44,9 @@
     height: clamp(20rem, 50vh, 50rem);
 
     background: var(--Rocket-League-3-hex);
-    background-image: url(../../images/teste.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: top;
 
     border: .3rem solid var(--Rocket-League-3-hex);
     border-radius: 1rem;
@@ -66,13 +65,29 @@
     transition: 1s;
 }
 
+.player:nth-child(1) {
+    background-image: url(../../images/carro1.jpg);    
+}
+
+.player:nth-child(2) {
+    background-image: url(../../images/carro2.jpg);    
+}
+
+.player:nth-child(3) {
+    background-image: url(../../images/carro3.jpg);    
+}
+
+.player:nth-child(4) {
+    background-image: url(../../images/carro4.jpg);    
+}
+
 .player:hover {
     border-color: var(--Rocket-League-5-hex);
 }
 
 .player img {
-    width: clamp(3rem, 4vw, 6rem);
-    height: clamp(3rem, 4vw, 6rem);
+    width: clamp(3rem, 4vw, 5rem);
+    height: clamp(3rem, 4vh, 5rem);
 }
 
 .player h3 {
